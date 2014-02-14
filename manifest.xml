@@ -1,0 +1,17 @@
+<package>
+  <description brief="oscpack">
+
+     oscpack
+
+  </description>
+  <author>Haikal Pribadi</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/oscpack</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+
