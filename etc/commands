@@ -1,0 +1,1 @@
+rostopic pub -1 /osc_send_vector std_msgs/Int32MultiArray -- '[[], 0]' '[1, 2, 3, 4, 5]'

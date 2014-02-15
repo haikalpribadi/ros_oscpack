@@ -231,6 +231,45 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named osc_receiver
+
+# Build rule for target.
+osc_receiver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 osc_receiver
+.PHONY : osc_receiver
+
+# fast build rule for target.
+osc_receiver/fast:
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/build
+.PHONY : osc_receiver/fast
+
+#=============================================================================
+# Target rules for targets named osc_sender
+
+# Build rule for target.
+osc_sender: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 osc_sender
+.PHONY : osc_sender
+
+# fast build rule for target.
+osc_sender/fast:
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/build
+.PHONY : osc_sender/fast
+
+#=============================================================================
+# Target rules for targets named osc_test
+
+# Build rule for target.
+osc_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 osc_test
+.PHONY : osc_test
+
+# fast build rule for target.
+osc_test/fast:
+	$(MAKE) -f CMakeFiles/osc_test.dir/build.make CMakeFiles/osc_test.dir/build
+.PHONY : osc_test/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_clean-test-results
 
 # Build rule for target.
@@ -348,19 +387,6 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
-# Target rules for targets named simple_send
-
-# Build rule for target.
-simple_send: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simple_send
-.PHONY : simple_send
-
-# fast build rule for target.
-simple_send/fast:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/build
-.PHONY : simple_send/fast
-
-#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -451,36 +477,61 @@ gtest_main/fast:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/SimpleSend.o: src/SimpleSend.cpp.o
-.PHONY : src/SimpleSend.o
+src/OscReceiver.o: src/OscReceiver.cpp.o
+.PHONY : src/OscReceiver.o
 
 # target to build an object file
-src/SimpleSend.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/SimpleSend.cpp.o
-.PHONY : src/SimpleSend.cpp.o
+src/OscReceiver.cpp.o:
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/OscReceiver.cpp.o
+.PHONY : src/OscReceiver.cpp.o
 
-src/SimpleSend.i: src/SimpleSend.cpp.i
-.PHONY : src/SimpleSend.i
+src/OscReceiver.i: src/OscReceiver.cpp.i
+.PHONY : src/OscReceiver.i
 
 # target to preprocess a source file
-src/SimpleSend.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/SimpleSend.cpp.i
-.PHONY : src/SimpleSend.cpp.i
+src/OscReceiver.cpp.i:
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/OscReceiver.cpp.i
+.PHONY : src/OscReceiver.cpp.i
 
-src/SimpleSend.s: src/SimpleSend.cpp.s
-.PHONY : src/SimpleSend.s
+src/OscReceiver.s: src/OscReceiver.cpp.s
+.PHONY : src/OscReceiver.s
 
 # target to generate assembly for a file
-src/SimpleSend.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/SimpleSend.cpp.s
-.PHONY : src/SimpleSend.cpp.s
+src/OscReceiver.cpp.s:
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/OscReceiver.cpp.s
+.PHONY : src/OscReceiver.cpp.s
+
+src/OscSender.o: src/OscSender.cpp.o
+.PHONY : src/OscSender.o
+
+# target to build an object file
+src/OscSender.cpp.o:
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/OscSender.cpp.o
+.PHONY : src/OscSender.cpp.o
+
+src/OscSender.i: src/OscSender.cpp.i
+.PHONY : src/OscSender.i
+
+# target to preprocess a source file
+src/OscSender.cpp.i:
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/OscSender.cpp.i
+.PHONY : src/OscSender.cpp.i
+
+src/OscSender.s: src/OscSender.cpp.s
+.PHONY : src/OscSender.s
+
+# target to generate assembly for a file
+src/OscSender.cpp.s:
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/OscSender.cpp.s
+.PHONY : src/OscSender.cpp.s
 
 src/ip/IpEndpointName.o: src/ip/IpEndpointName.cpp.o
 .PHONY : src/ip/IpEndpointName.o
 
 # target to build an object file
 src/ip/IpEndpointName.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/IpEndpointName.cpp.o
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/IpEndpointName.cpp.o
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/IpEndpointName.cpp.o
 .PHONY : src/ip/IpEndpointName.cpp.o
 
 src/ip/IpEndpointName.i: src/ip/IpEndpointName.cpp.i
@@ -488,7 +539,8 @@ src/ip/IpEndpointName.i: src/ip/IpEndpointName.cpp.i
 
 # target to preprocess a source file
 src/ip/IpEndpointName.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/IpEndpointName.cpp.i
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/IpEndpointName.cpp.i
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/IpEndpointName.cpp.i
 .PHONY : src/ip/IpEndpointName.cpp.i
 
 src/ip/IpEndpointName.s: src/ip/IpEndpointName.cpp.s
@@ -496,7 +548,8 @@ src/ip/IpEndpointName.s: src/ip/IpEndpointName.cpp.s
 
 # target to generate assembly for a file
 src/ip/IpEndpointName.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/IpEndpointName.cpp.s
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/IpEndpointName.cpp.s
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/IpEndpointName.cpp.s
 .PHONY : src/ip/IpEndpointName.cpp.s
 
 src/ip/NetworkingUtils.o: src/ip/NetworkingUtils.cpp.o
@@ -504,7 +557,8 @@ src/ip/NetworkingUtils.o: src/ip/NetworkingUtils.cpp.o
 
 # target to build an object file
 src/ip/NetworkingUtils.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/NetworkingUtils.cpp.o
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/NetworkingUtils.cpp.o
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/NetworkingUtils.cpp.o
 .PHONY : src/ip/NetworkingUtils.cpp.o
 
 src/ip/NetworkingUtils.i: src/ip/NetworkingUtils.cpp.i
@@ -512,7 +566,8 @@ src/ip/NetworkingUtils.i: src/ip/NetworkingUtils.cpp.i
 
 # target to preprocess a source file
 src/ip/NetworkingUtils.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/NetworkingUtils.cpp.i
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/NetworkingUtils.cpp.i
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/NetworkingUtils.cpp.i
 .PHONY : src/ip/NetworkingUtils.cpp.i
 
 src/ip/NetworkingUtils.s: src/ip/NetworkingUtils.cpp.s
@@ -520,7 +575,8 @@ src/ip/NetworkingUtils.s: src/ip/NetworkingUtils.cpp.s
 
 # target to generate assembly for a file
 src/ip/NetworkingUtils.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/NetworkingUtils.cpp.s
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/NetworkingUtils.cpp.s
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/NetworkingUtils.cpp.s
 .PHONY : src/ip/NetworkingUtils.cpp.s
 
 src/ip/UdpSocket.o: src/ip/UdpSocket.cpp.o
@@ -528,7 +584,8 @@ src/ip/UdpSocket.o: src/ip/UdpSocket.cpp.o
 
 # target to build an object file
 src/ip/UdpSocket.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/UdpSocket.cpp.o
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/UdpSocket.cpp.o
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/UdpSocket.cpp.o
 .PHONY : src/ip/UdpSocket.cpp.o
 
 src/ip/UdpSocket.i: src/ip/UdpSocket.cpp.i
@@ -536,7 +593,8 @@ src/ip/UdpSocket.i: src/ip/UdpSocket.cpp.i
 
 # target to preprocess a source file
 src/ip/UdpSocket.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/UdpSocket.cpp.i
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/UdpSocket.cpp.i
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/UdpSocket.cpp.i
 .PHONY : src/ip/UdpSocket.cpp.i
 
 src/ip/UdpSocket.s: src/ip/UdpSocket.cpp.s
@@ -544,7 +602,8 @@ src/ip/UdpSocket.s: src/ip/UdpSocket.cpp.s
 
 # target to generate assembly for a file
 src/ip/UdpSocket.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/ip/UdpSocket.cpp.s
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/ip/UdpSocket.cpp.s
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/ip/UdpSocket.cpp.s
 .PHONY : src/ip/UdpSocket.cpp.s
 
 src/osc/OscOutboundPacketStream.o: src/osc/OscOutboundPacketStream.cpp.o
@@ -552,7 +611,8 @@ src/osc/OscOutboundPacketStream.o: src/osc/OscOutboundPacketStream.cpp.o
 
 # target to build an object file
 src/osc/OscOutboundPacketStream.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscOutboundPacketStream.cpp.o
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscOutboundPacketStream.cpp.o
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscOutboundPacketStream.cpp.o
 .PHONY : src/osc/OscOutboundPacketStream.cpp.o
 
 src/osc/OscOutboundPacketStream.i: src/osc/OscOutboundPacketStream.cpp.i
@@ -560,7 +620,8 @@ src/osc/OscOutboundPacketStream.i: src/osc/OscOutboundPacketStream.cpp.i
 
 # target to preprocess a source file
 src/osc/OscOutboundPacketStream.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscOutboundPacketStream.cpp.i
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscOutboundPacketStream.cpp.i
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscOutboundPacketStream.cpp.i
 .PHONY : src/osc/OscOutboundPacketStream.cpp.i
 
 src/osc/OscOutboundPacketStream.s: src/osc/OscOutboundPacketStream.cpp.s
@@ -568,7 +629,8 @@ src/osc/OscOutboundPacketStream.s: src/osc/OscOutboundPacketStream.cpp.s
 
 # target to generate assembly for a file
 src/osc/OscOutboundPacketStream.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscOutboundPacketStream.cpp.s
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscOutboundPacketStream.cpp.s
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscOutboundPacketStream.cpp.s
 .PHONY : src/osc/OscOutboundPacketStream.cpp.s
 
 src/osc/OscPrintReceivedElements.o: src/osc/OscPrintReceivedElements.cpp.o
@@ -576,7 +638,8 @@ src/osc/OscPrintReceivedElements.o: src/osc/OscPrintReceivedElements.cpp.o
 
 # target to build an object file
 src/osc/OscPrintReceivedElements.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscPrintReceivedElements.cpp.o
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscPrintReceivedElements.cpp.o
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscPrintReceivedElements.cpp.o
 .PHONY : src/osc/OscPrintReceivedElements.cpp.o
 
 src/osc/OscPrintReceivedElements.i: src/osc/OscPrintReceivedElements.cpp.i
@@ -584,7 +647,8 @@ src/osc/OscPrintReceivedElements.i: src/osc/OscPrintReceivedElements.cpp.i
 
 # target to preprocess a source file
 src/osc/OscPrintReceivedElements.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscPrintReceivedElements.cpp.i
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscPrintReceivedElements.cpp.i
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscPrintReceivedElements.cpp.i
 .PHONY : src/osc/OscPrintReceivedElements.cpp.i
 
 src/osc/OscPrintReceivedElements.s: src/osc/OscPrintReceivedElements.cpp.s
@@ -592,7 +656,8 @@ src/osc/OscPrintReceivedElements.s: src/osc/OscPrintReceivedElements.cpp.s
 
 # target to generate assembly for a file
 src/osc/OscPrintReceivedElements.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscPrintReceivedElements.cpp.s
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscPrintReceivedElements.cpp.s
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscPrintReceivedElements.cpp.s
 .PHONY : src/osc/OscPrintReceivedElements.cpp.s
 
 src/osc/OscReceivedElements.o: src/osc/OscReceivedElements.cpp.o
@@ -600,7 +665,8 @@ src/osc/OscReceivedElements.o: src/osc/OscReceivedElements.cpp.o
 
 # target to build an object file
 src/osc/OscReceivedElements.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscReceivedElements.cpp.o
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscReceivedElements.cpp.o
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscReceivedElements.cpp.o
 .PHONY : src/osc/OscReceivedElements.cpp.o
 
 src/osc/OscReceivedElements.i: src/osc/OscReceivedElements.cpp.i
@@ -608,7 +674,8 @@ src/osc/OscReceivedElements.i: src/osc/OscReceivedElements.cpp.i
 
 # target to preprocess a source file
 src/osc/OscReceivedElements.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscReceivedElements.cpp.i
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscReceivedElements.cpp.i
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscReceivedElements.cpp.i
 .PHONY : src/osc/OscReceivedElements.cpp.i
 
 src/osc/OscReceivedElements.s: src/osc/OscReceivedElements.cpp.s
@@ -616,7 +683,8 @@ src/osc/OscReceivedElements.s: src/osc/OscReceivedElements.cpp.s
 
 # target to generate assembly for a file
 src/osc/OscReceivedElements.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscReceivedElements.cpp.s
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscReceivedElements.cpp.s
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscReceivedElements.cpp.s
 .PHONY : src/osc/OscReceivedElements.cpp.s
 
 src/osc/OscTypes.o: src/osc/OscTypes.cpp.o
@@ -624,7 +692,8 @@ src/osc/OscTypes.o: src/osc/OscTypes.cpp.o
 
 # target to build an object file
 src/osc/OscTypes.cpp.o:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscTypes.cpp.o
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscTypes.cpp.o
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscTypes.cpp.o
 .PHONY : src/osc/OscTypes.cpp.o
 
 src/osc/OscTypes.i: src/osc/OscTypes.cpp.i
@@ -632,7 +701,8 @@ src/osc/OscTypes.i: src/osc/OscTypes.cpp.i
 
 # target to preprocess a source file
 src/osc/OscTypes.cpp.i:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscTypes.cpp.i
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscTypes.cpp.i
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscTypes.cpp.i
 .PHONY : src/osc/OscTypes.cpp.i
 
 src/osc/OscTypes.s: src/osc/OscTypes.cpp.s
@@ -640,8 +710,33 @@ src/osc/OscTypes.s: src/osc/OscTypes.cpp.s
 
 # target to generate assembly for a file
 src/osc/OscTypes.cpp.s:
-	$(MAKE) -f CMakeFiles/simple_send.dir/build.make CMakeFiles/simple_send.dir/src/osc/OscTypes.cpp.s
+	$(MAKE) -f CMakeFiles/osc_receiver.dir/build.make CMakeFiles/osc_receiver.dir/src/osc/OscTypes.cpp.s
+	$(MAKE) -f CMakeFiles/osc_sender.dir/build.make CMakeFiles/osc_sender.dir/src/osc/OscTypes.cpp.s
 .PHONY : src/osc/OscTypes.cpp.s
+
+src/test.o: src/test.cpp.o
+.PHONY : src/test.o
+
+# target to build an object file
+src/test.cpp.o:
+	$(MAKE) -f CMakeFiles/osc_test.dir/build.make CMakeFiles/osc_test.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
+
+src/test.i: src/test.cpp.i
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	$(MAKE) -f CMakeFiles/osc_test.dir/build.make CMakeFiles/osc_test.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	$(MAKE) -f CMakeFiles/osc_test.dir/build.make CMakeFiles/osc_test.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
 
 # Help Target
 help:
@@ -661,6 +756,9 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... osc_receiver"
+	@echo "... osc_sender"
+	@echo "... osc_test"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_clean-test-results"
 	@echo "... rosbuild_precompile"
@@ -671,7 +769,6 @@ help:
 	@echo "... rospack_gensrv"
 	@echo "... rospack_gensrv_all"
 	@echo "... run_tests"
-	@echo "... simple_send"
 	@echo "... test"
 	@echo "... test-future"
 	@echo "... test-results"
@@ -679,9 +776,12 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... src/SimpleSend.o"
-	@echo "... src/SimpleSend.i"
-	@echo "... src/SimpleSend.s"
+	@echo "... src/OscReceiver.o"
+	@echo "... src/OscReceiver.i"
+	@echo "... src/OscReceiver.s"
+	@echo "... src/OscSender.o"
+	@echo "... src/OscSender.i"
+	@echo "... src/OscSender.s"
 	@echo "... src/ip/IpEndpointName.o"
 	@echo "... src/ip/IpEndpointName.i"
 	@echo "... src/ip/IpEndpointName.s"
@@ -703,6 +803,9 @@ help:
 	@echo "... src/osc/OscTypes.o"
 	@echo "... src/osc/OscTypes.i"
 	@echo "... src/osc/OscTypes.s"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 

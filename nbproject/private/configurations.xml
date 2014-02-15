@@ -38,6 +38,22 @@
           </df>
           <df name="doxygen.dir">
           </df>
+          <df name="osc_receiver.dir">
+            <df name="src">
+              <df name="ip">
+              </df>
+              <df name="osc">
+              </df>
+            </df>
+          </df>
+          <df name="osc_sender.dir">
+            <df name="src">
+              <df name="ip">
+              </df>
+              <df name="osc">
+              </df>
+            </df>
+          </df>
           <df name="rosbuild_clean-test-results.dir">
           </df>
           <df name="ROSBUILD_genmsg_cpp.dir">
@@ -63,14 +79,6 @@
           <df name="rospack_gensrv_all.dir">
           </df>
           <df name="run_tests.dir">
-          </df>
-          <df name="simple_send.dir">
-            <df name="src">
-              <df name="ip">
-              </df>
-              <df name="osc">
-              </df>
-            </df>
           </df>
           <df name="test-future.dir">
           </df>
@@ -108,15 +116,6 @@
       </df>
       <df name="include">
         <df name="ip">
-          <df name="posix">
-            <in>NetworkingUtils.cpp</in>
-            <in>UdpSocket.cpp</in>
-          </df>
-          <df name="win32">
-            <in>NetworkingUtils.cpp</in>
-            <in>UdpSocket.cpp</in>
-          </df>
-          <in>IpEndpointName.cpp</in>
           <in>IpEndpointName.h</in>
           <in>NetworkingUtils.h</in>
           <in>PacketListener.h</in>
@@ -127,20 +126,27 @@
           <in>MessageMappingOscPacketListener.h</in>
           <in>OscException.h</in>
           <in>OscHostEndianness.h</in>
-          <in>OscOutboundPacketStream.cpp</in>
           <in>OscOutboundPacketStream.h</in>
           <in>OscPacketListener.h</in>
-          <in>OscPrintReceivedElements.cpp</in>
           <in>OscPrintReceivedElements.h</in>
-          <in>OscReceivedElements.cpp</in>
           <in>OscReceivedElements.h</in>
-          <in>OscTypes.cpp</in>
           <in>OscTypes.h</in>
         </df>
         <df name="oscpack">
+          <in>OscReceiver.h</in>
+          <in>OscSender.h</in>
+        </df>
+        <df name="tests">
+          <in>OscReceiveTest.h</in>
+          <in>OscSendTests.h</in>
+          <in>OscUnitTests.h</in>
         </df>
       </df>
+      <df name="launch">
+      </df>
       <df name="lib">
+      </df>
+      <df name="msg">
       </df>
       <df name="src">
         <df name="ip">
@@ -154,8 +160,16 @@
           <in>OscReceivedElements.cpp</in>
           <in>OscTypes.cpp</in>
         </df>
-        <in>SimpleReceive.cpp</in>
-        <in>SimpleSend.cpp</in>
+        <df name="tests">
+          <in>OscReceiveTest.cpp</in>
+          <in>OscSendTests.cpp</in>
+          <in>OscUnitTests.cpp</in>
+        </df>
+        <in>OscReceiver.cpp</in>
+        <in>OscSender.cpp</in>
+        <in>test.cpp</in>
+      </df>
+      <df name="srv">
       </df>
     </df>
   </logicalFolder>

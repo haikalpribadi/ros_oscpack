@@ -1,0 +1,12 @@
+<!--%Tag(FULL)%-->
+<launch>
+	
+	<param name="osc_address" value="127.0.0.1"/>
+	<param name="osc_port" value="7000"/>
+	
+	<node pkg="oscpack" type="osc_sender" name="OscSender" output="screen"/>
+	<node pkg="oscpack" type="osc_receiver" name="OscReceiver" output="screen"/>
+	<node pkg="oscpack" type="osc_test" name="OscTest" output="screen"/>
+	
+</launch>
+<!--%EndTag(FULL)%-->

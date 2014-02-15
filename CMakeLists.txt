@@ -33,6 +33,14 @@ include_directories (include/oscpack)
 include_directories (include/osc)
 include_directories (include/ip)
 
-rosbuild_add_executable(simple_send src/SimpleSend.cpp 
-									src/ip/IpEndpointName.cpp src/ip/UdpSocket.cpp src/ip/NetworkingUtils.cpp src/osc/OscOutboundPacketStream.cpp src/osc/OscPrintReceivedElements.cpp src/osc/OscReceivedElements.cpp src/osc/OscTypes.cpp)
-
+rosbuild_add_executable(osc_sender src/OscSender.cpp
+						src/ip/IpEndpointName.cpp src/ip/UdpSocket.cpp
+						src/ip/NetworkingUtils.cpp src/osc/OscOutboundPacketStream.cpp
+						src/osc/OscPrintReceivedElements.cpp src/osc/OscReceivedElements.cpp
+						src/osc/OscTypes.cpp)
+rosbuild_add_executable(osc_receiver src/OscReceiver.cpp
+						src/ip/IpEndpointName.cpp src/ip/UdpSocket.cpp 
+						src/ip/NetworkingUtils.cpp src/osc/OscOutboundPacketStream.cpp 
+						src/osc/OscPrintReceivedElements.cpp src/osc/OscReceivedElements.cpp 
+						src/osc/OscTypes.cpp)
+rosbuild_add_executable(osc_test src/test.cpp)

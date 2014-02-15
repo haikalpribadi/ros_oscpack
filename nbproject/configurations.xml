@@ -3,23 +3,15 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack" name="0">
       <df name="include">
-        <df name="ip">
-          <df name="posix">
-            <in>NetworkingUtils.cpp</in>
-            <in>UdpSocket.cpp</in>
-          </df>
-          <df name="win32">
-            <in>NetworkingUtils.cpp</in>
-            <in>UdpSocket.cpp</in>
-          </df>
-          <in>IpEndpointName.cpp</in>
+        <df name="oscpack">
+          <in>OscReceiver.h</in>
+          <in>OscSender.h</in>
         </df>
-        <df name="osc">
-          <in>OscOutboundPacketStream.cpp</in>
-          <in>OscPrintReceivedElements.cpp</in>
-          <in>OscReceivedElements.cpp</in>
-          <in>OscTypes.cpp</in>
-        </df>
+      </df>
+      <df name="src">
+        <in>OscReceiver.cpp</in>
+        <in>OscSender.cpp</in>
+        <in>test.cpp</in>
       </df>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -57,68 +49,24 @@
           </ccTool>
         </makeTool>
       </makefileType>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/ip/IpEndpointName.cpp"
+      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/oscpack/OscReceiver.h"
             ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/ip/posix/NetworkingUtils.cpp"
+      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/src/OscReceiver.cpp"
             ex="false"
             tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
+            flavor2="0">
       </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/ip/posix/UdpSocket.cpp"
+      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/src/OscSender.cpp"
             ex="false"
             tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
+            flavor2="0">
       </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/ip/win32/NetworkingUtils.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
+      <item path="include/oscpack/OscSender.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/ip/win32/UdpSocket.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
-      </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/osc/OscOutboundPacketStream.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
-      </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/osc/OscPrintReceivedElements.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
-      </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/osc/OscReceivedElements.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
-      </item>
-      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/osc/OscTypes.cpp"
-            ex="false"
-            tool="1"
-            flavor2="4">
-        <ccTool>
-        </ccTool>
+      <item path="src/test.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
