@@ -54,6 +54,11 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/include/oscpack/OscSender.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/src/OscReceiver.cpp"
             ex="false"
             tool="1"
@@ -64,9 +69,10 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="include/oscpack/OscSender.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/test.cpp" ex="false" tool="1" flavor2="0">
+      <item path="/home/haikalpribadi/Workspace/ROS/radiophonic/oscpack/src/test.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
       </item>
     </conf>
   </confs>

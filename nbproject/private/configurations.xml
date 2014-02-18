@@ -54,6 +54,10 @@
               </df>
             </df>
           </df>
+          <df name="osc_test.dir">
+            <df name="src">
+            </df>
+          </df>
           <df name="rosbuild_clean-test-results.dir">
           </df>
           <df name="ROSBUILD_genmsg_cpp.dir">
@@ -113,6 +117,8 @@
         </df>
         <df name="test_results">
         </df>
+      </df>
+      <df name="etc">
       </df>
       <df name="include">
         <df name="ip">
