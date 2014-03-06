@@ -16,6 +16,7 @@ OscSender::OscSender() : socket(IpEndpointName(ADDRESS, PORT)) {
     }
     else {
         address = "127.0.0.1";
+        ROS_INFO("OscSender using address: 127.0.0.1");
     }
     
     if(node.getParam("osc_port", port)) {

@@ -13,6 +13,7 @@ OscReceiver::OscReceiver() {
     }
     else {
         port = 7000;
+        ROS_INFO("OscReceiver using port: 7000");
     }
     oscMessageReceiver_pub = node.advertise<std_msgs::String>("osc_receive_message", 1000);
     oscVectorReceiver_pub = node.advertise<std_msgs::Int32MultiArray>("osc_receive_vector", 1000);
