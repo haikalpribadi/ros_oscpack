@@ -26,6 +26,7 @@ public:
     string address;
     int port;
     int output_buffer_size;
+    int offset;
     
     OscSender();
 

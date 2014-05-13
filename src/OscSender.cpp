@@ -26,6 +26,13 @@ OscSender::OscSender() : socket(IpEndpointName(ADDRESS, PORT)) {
         port = 7000;
     }
     
+    if(node.getParam("osc_offset", offset)) {
+        ROS_INFO("OscSender sending values from offset: %d", offset);
+    }
+    else {
+        offset = 0;
+    }
+    
     new(&socket) UdpTransmitSocket(IpEndpointName(address.c_str(), port));
     
     output_buffer_size = 1024;
@@ -48,12 +55,22 @@ void OscSender::oscMessageCallback(const std_msgs::String::ConstPtr& msg) {
 void OscSender::oscVectorCallback(const std_msgs::Int32MultiArray::ConstPtr& msg) {
     char buffer[output_buffer_size];
     osc::OutboundPacketStream packet(buffer, output_buffer_size);
+    stringstream ss;
     
+    /* OLD OSC BUNDLE: SENDING AN INTEGER OF ARRAY AT ONCE
     packet << osc::BeginBundleImmediate << osc::BeginMessage(VECTOR) << osc::BeginArray;
     for(int i=0; i<msg->data.size(); i++) {
         packet << msg->data[i];
     }
     packet << osc::EndArray << osc::EndMessage << osc::EndBundle;
+     */
+    
+    
+    packet << osc::BeginBundleImmediate;
+    for(int i=0; i<msg->data.size(); i++) {
+        packet << osc::BeginMessage(ss.str().c_str()) << (msg->data[i] + offset) << osc::EndMessage;
+    }
+    packet << osc::EndBundle;
     
     socket.Send(packet.Data(), packet.Size());
 }
