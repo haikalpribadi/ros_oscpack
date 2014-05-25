@@ -55,7 +55,6 @@ void OscSender::oscMessageCallback(const std_msgs::String::ConstPtr& msg) {
 void OscSender::oscVectorCallback(const std_msgs::Int32MultiArray::ConstPtr& msg) {
     char buffer[output_buffer_size];
     osc::OutboundPacketStream packet(buffer, output_buffer_size);
-    stringstream ss;
     
     /* OLD OSC BUNDLE: SENDING AN INTEGER OF ARRAY AT ONCE
     packet << osc::BeginBundleImmediate << osc::BeginMessage(VECTOR) << osc::BeginArray;
@@ -68,6 +67,8 @@ void OscSender::oscVectorCallback(const std_msgs::Int32MultiArray::ConstPtr& msg
     
     packet << osc::BeginBundleImmediate;
     for(int i=0; i<msg->data.size(); i++) {
+        stringstream ss;
+        ss << "/" << i;
         packet << osc::BeginMessage(ss.str().c_str()) << (msg->data[i] + offset) << osc::EndMessage;
     }
     packet << osc::EndBundle;
